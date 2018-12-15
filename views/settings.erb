@@ -1,0 +1,34 @@
+<style>
+  body {
+    background-image: url("/images/account.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+<div class="row settings-page">
+  <div class="col s10 offset-s1 m6 offset-m3 l4 offset-l2">
+    <form action="/settings" method="post" class="create-account">
+     <h4 class="settings-h4">Update Your Account</h4>
+     <input type="hidden" name="_method" value="PUT">
+      <label>First Name<input  value="<%= @user.first_name %>" type="text" name="first_name" id="settings_first_name" required></label>
+      <label>Last Name <input value="<%= @user.last_name %>" type="text" name="last_name" id="settings_last_name" required></label>
+      <label>Username<input value="<%= @user.username %>" type="text" name="username" id="settings_username" required></label>
+      <label>Password<input value="<%= @user.password %>" type="text" name="password" id="settings_password" required></label>
+      <label>Email<input value="<%= @user.email %>" type="email" name="email" id="settings_email" required></label>
+      <label>Image URL<input value="<%= @user.image_url %>" type="text" name="image_url" id="settings_image_url" required></label>
+      <input class="text-white waves-effect waves-light btn" type="submit" value="Update">
+    </form>
+  
+
+    
+    <form action="/settings" method="post" class="delete-account">
+    <h4 class="settings-h4">Delete Your Account</h4>
+    <input type="text" name="username" id="settings_username" placeholder="Username" required>
+      <input type="password" name="password" id="settings_password" placeholder="Password" required>
+      <input class="text-white waves-effect waves-light btn" type="submit" value="Delete Account"> 
+    </form>
+    
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<style>
+  body {
+    background-image: url("/images/signup.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+<div class="row sign-up-page  ">
+  <div class="col s6">
+    <form class="sign-up-form delete-account" action="/sign-up" method="post" >
+    <h1>Signup to World Kitchen Adventures</h1>
+    <input type="text" name="first_name" id="first_name" placeholder="First Name" required>
+      <input type="text" name="last_name" id="last_name" placeholder="Last Name" required>
+      <input type="text" name="username" id="username" placeholder="Username" required>
+      <input type="password" name="password" id="password" placeholder="Password" required>
+      <input type="email" name="email" id="email" placeholder="Email" required>
+      <input type="hidden" value="https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" name="image_url" id="image_url">
+      <input type="date" name="birthday" id="birthday" placeholder="Birthday" required>
+
+      <input style="color: white" class="waves-effect waves-light btn" type="submit" value="Sign Up">
+
+       <p> Be a great foodie and give us a recipe!!!</p>
+    </form>
+
+  </div>
+</div>

@@ -1,0 +1,28 @@
+
+
+<style>
+  body {
+    background-image: url("/images/signup.jpg");
+    height: 100vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+</style>
+
+<div class="row sign-in-page">
+  <div class="col s10 offset-s1 m6 offset-m3 l4 offset-l4">
+    <form action="/sign-in" method="post" class="delete-account">
+
+      <h1> Welcome to world kitchen adventures</h1>
+    <h4 class="sign-in-h4">Sign In</h4>
+      <input type="text" name="username" id="user_name" placeholder="Username" required>
+      <input type="password" name="password" id="_password" placeholder="Password" required>
+      <input class="blog btn" type="submit" value="Sign in">
+      <br>
+      <br>
+             <b> OR </b>
+      <p><a class="blog btn" href="/sign-up">Sign Up</a></p>
+    </form>
+  </div>
+</div>

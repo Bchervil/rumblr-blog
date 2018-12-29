@@ -3,6 +3,8 @@ require "sinatra/activerecord"
 require "sinatra/flash"
 require "bcrypt"
 require "./models"
+require 'will_paginate'
+require 'will_paginate/active_record'
 
 
 enable :sessions

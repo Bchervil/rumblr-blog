@@ -192,6 +192,10 @@ redirect "/profile"
 end
 end
 
+get "/posts" do
+  @post = Post.last(20)
+  erb :"/other_users_posts.erb"
+end
 
 # get "/posts/:id" do
 #     @post =  Post.find(params['id'])

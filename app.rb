@@ -193,8 +193,8 @@ end
 end
 
 get "/posts" do
-  @post = Post.last(20)
-  erb :"/other_users_posts.erb"
+  @post = Post.last(20).reverse
+  erb :"/feed"
 end
 
 # get "/posts/:id" do

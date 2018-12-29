@@ -194,9 +194,17 @@ redirect "/profile"
 end
 end
 
-get "/posts" do
-  @post = Post.last(20).reverse
-  erb :"/feed"
+get "/feed" do
+  @users = User.all.reverse
+		@posts = Post.all
+		@posts = Post.paginate(:page => params[:page], :per_page => 20)
+		if !session[:id].nil?
+		erb :feed, :layout => :layout_loggedin
+		
+else 
+		redirect '/login'
+end
+ 
 end
 
 # get "/posts/:id" do

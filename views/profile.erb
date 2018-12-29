@@ -13,7 +13,7 @@
   <h1 class="white-text">Profile</h1>
   <h2 class="white-text">Welcome <%=@user.username.upcase%></h2>
 
-    <% @user.posts.last(20).each do |post| %>
+    <% @user.posts.last(20).reverse.each do |post| %>
 
       <div class="row">
         <div class="col s12 m7" style="width: 100%;">

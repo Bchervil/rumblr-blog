@@ -14,7 +14,7 @@
   <h2 class="white-text">Welcome <%=@user.username.upcase%></h2>
 
     <% @user.posts.last(20).each do |post| %>
-
+      <%= will_paginate @posts %>
       <div class="row">
         <div class="col s12 m7" style="width: 100%;">
           <div class="card card-holder" >

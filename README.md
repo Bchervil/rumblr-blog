@@ -16,4 +16,3 @@
  Mobile responsive design.
  
  
-https://worldkitchenadventures.herokuapp.com

@@ -3,8 +3,6 @@ require "sinatra/activerecord"
 require "sinatra/flash"
 require "bcrypt"
 require "./models"
-require 'will_paginate'
-require 'will_paginate/active_record'
 
 
 enable :sessions
@@ -196,9 +194,12 @@ end
 
 
 get "/feed" do
-  @post = Post.last(20).reverse
+  @posts = Post.last(20).reverse
   erb :"/feed"
 end
+
+
+
 
 # get "/feed" do
 #   @users = User.all.reverse

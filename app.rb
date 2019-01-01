@@ -196,7 +196,7 @@ end
 
 
 get "/feed" do
-  @posts = Post.last(20).reverse
+  @post = Post.last(20).reverse
   erb :"/feed"
 end
 
@@ -205,24 +205,11 @@ end
 # 		@posts = Post.all
 # 		@posts = Post.paginate(:page => params[:page], :per_page => 20)
 # 		if !session[:id].nil?
-# 		erb :feed, :layout => :layout_loggedin
+# 		erb :feed, :layout => :log_in
 		
 # else 
-# 		redirect '/login'
+# 		redirect '/log_in'
 # end
  
 # end
 
-# get "/posts/:id" do
-#     @post =  Post.find(params['id'])
-#     @post.destroy
-#     redirect :"/users/#{session["user_id"]}"
-# end
-
-
-# post "/posts/:id" do
-#     @post =  Post.find(params['id'])
-#     @post.destroy
-#     user =  session['user_id']
-#     redirect "/users/#{user}"
-# end

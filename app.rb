@@ -192,11 +192,17 @@ redirect "/profile"
 end
 end
 
-
 get "/feed" do
-  @posts = Post.last(20).reverse
-  erb :"/feed"
+
+  @post = Post.last(20)
+   erb  :feed
+
 end
+
+# get "/feed" do
+#   @posts = Post.last(20).reverse
+#   erb :"/feed"
+# end
 
 
 

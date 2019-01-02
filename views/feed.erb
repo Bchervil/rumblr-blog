@@ -7,17 +7,15 @@
     background-repeat: no-repeat;
   }
 </style>
-<div class="row profile">
-  <div class="col s10 offset-s1 m10 offset-m1 l6 offset-l3">
+<div class="row user-profile">
+  <div class="col s10 offset-s1 m8 offset-m2 l6 offset-l3">
 
-  <h1 class="white-text">Profile</h1>
-  <h2 class="white-text">Welcome <%=@user.username.upcase%></h2>
+    <% @post.reverse.each do |post| %>
 
-    <% @users.each do |post| %>
-      
+
       <div class="row">
         <div class="col s12 m7" style="width: 100%;">
-          <div class="card card-holder" >
+          <div class="card horizontal card-holder" >
             <div class="card-image">
               <img src="<%= post.user.image_url %>" class="responsive-img">
             </div>
@@ -27,15 +25,12 @@
               <p><%= post.content %></p>
             </div>
             <div class="card-action">
-              <a class="username-link" href="/user-profile/<%= post.user.id %>"><%= post.user.username %></a>
-              <form class="btn2" action="/delete-post/<%= post.id %>" method="post">
-                <input type="submit" value="Delete Post">
-              </form>
+            <a class="username-link" href="/user-profile/<%= post.user.id %>"><%= post.user.username %></a>
             </div>
             </div>
           </div>
         </div>
-        </div>
+      </div>
     <% end %>
   </div>
 </div>
